@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- My Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- My CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dayanna's to do list app</title>
+  </head>
+  <body>
+    
+    <!-- beginning of form-->
+    <div class="container">
+
+      <!-- My heading-->
+  <div class="row">
+    <div class="col">
+      <h1 class="heading">My To Do List</h1>
+    </div>
+</div>
+
+
+  <div class="row">
+    <div class="col">
+      
+     <!-- form -->
+       <form id="formDiv">
+          <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" class="form-control" id="nameInput"  placeholder="Who assigned this?" required>
+         </div>
+
+           <div class="form-group">
+             <label for="descriptionInput">Description:</label>
+             <input type="text" class="form-control" id="descriptionInput" placeholder="What's the task?" required>
+           </div>
+
+             <div class="form-group">
+               <label for="assignedInput">Assigned To:</label>
+               <input type="text" class="form-control" id="assignedInput" placeholder="Assigned to?" required>
+             </div>
+
+              <div class="form-group">
+               <label for="dateInput">Date:</label>
+               <input type="date" class="form-control" id="dateInput" 
+               value="2025-07-22"
+               min="2020-01-01" max="2030-01-01">
+              </div>
+
+               <div class="form-group">
+                 <label for="status">Status:</label> 
+                  <select class="form-control" id="status">
+                   <option selected>Choose:</option>
+                   <option value= "todo">To Do:</option>
+                   <option value= "inprogress">In Progress:</option>
+                   <option value= "review">Review:</option>
+                   <option value= "done">Done:</option>
+                </select>
+              </div>
+              <!-- add item button-->
+           <button type="button" class="btn btn-primary" id="addbutton">Add Item</button> 
+         </form> 
+
+    </div>
+    <!-- this is the task list area -->
+        <div class="col">
+          <div class="list-group" id="tasksList"></div>
+        </div>
+
+   </div>  
+</div>            
+     
+               
+<!-- this row, where each card will have its own column (col-md-4)-->
+<div class="container"> <div class="row" id="cardsArea"></div> </div>
+  <!-- inner HTML for the row above, goes here-->
+
+    <!-- MY JS -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
